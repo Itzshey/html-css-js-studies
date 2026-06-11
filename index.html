@@ -1,41 +1,106 @@
 <!DOCTYPE html>
-<!-- DOCTYPE representa o tipo de documento e ajuda o browser a mostrar a pagina 
- corretamente. So uma vez e em cima de qualquer tag html. -->
- <html>
-    <!-- A tag html e onde o projeto sera incluido. -->
+<!-- DOCTYPE indicates that the doc is made in HTML5. Helps browsers to display web pages correctly. -->
+ <html lang="en">
+    <!-- The tag html is the base of the project. The lang attribute is used to declare the language of the web page. -->
      <head>
-        <title> Titulo da pagina :D </title>
-        <meta name="descprition" content="A descricao que aparece no chrome">
+      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+      <!-- Favicon is the little image that apears on the left side of the tab-->
+        <title> Page title :D </title>
+        <meta name="descprition" content="My page descprition on the browser!">
+        <meta charset="UTF-8">
+        
      </head>
-     <!-- A tag head contem informacoes como o titulo da aba, e a descricao da pagina antes de se
-      abrir ela. Sao coisas de fora da pagina. Metadados. -->
+     <!-- The tag "head" includes info the title of the page (show in the page's tab), and the description of the page that appears before you open it. It can also include charset (allows special chars), viewport (controls how the page is displayed on mobile devices), page description, keywords, author and others. Data outside the page aka meta info. -->
      <body>
+      <!--Body includes all the visible contents-->
+      <!--The tags header, main, and footer are semantic tags, intended to separate each area of ​​the page.-->
         <header>
-             <!-- O cabecalho da pagina. -->
-             <h1> Titulo principal H1 </h1>
-             <!-- No HTML e uma boa pratica usar somente um H1 por pagina-->
-             <h2> Titulo secundario H2</h2>
-             <!-- Para titulos, tem do H1 ao H6-->
+             <!-- Page main header. -->
+             <h1> Main page header  H1 </h1>
+             <!-- In HTML is good practice using only one H1 header.-->
+             <h2> Secondary header H2</h2>
+             <!-- Headers go from H1 to H6. The diference bettwen headers is the hierarchy-->
         </header>
 
         <main>
-            <!-- Conteudo principal. -->
+            <!-- Main content. -->
              <section>
-                <!-- Uma parte do conteudo principal.-->
-                 <p> Um paragrafo e usado dessa forma. </p>
-                 <p> Usando a tag <strong> strong. </strong> voce deixa o texto destacado. </p>
-                 <p> Para deixar em <em>italico</em> se usa a tag em. </p>
-                 <p> Para pular uma linha <br> se usa a tag br</p>
-                 <p> Quando for fazer uma abreviacao se usa a tag abbr.<br> 
+
+                <!-- Section of the main content.-->
+                 <p> This is how a paragraph is used. &lt;p&gt; </p>
+                 <p> Using the <strong> &lt;strong&gt;. </strong> tag, the text is writen in bold. </p>
+                 <p> Using the <em> &lt;em&gt;</em> tag the tag becomes italic </p>
+                 <p> To skip a line, use the &lt;br&gt; tag! <br> It's considered an empty element, since there is only a start tag.</p>
+                 <p> To make an abreviation use the &lt;abbr&gt; tag.<br> 
                     EX: <abbr title="HyperText Markup Language">HTML</abbr></p>
+                 <p> To add a link use the &lt;a&gt; tag.</p>
+                 <a href="https://youtu.be/dQw4w9WgXcQ?si=xRMx5ib9oxu1l0vj"> this is a link <br></a>
+                 <p> To add an image you use the &lt;img&gt; tag.</p>
+                 <img src="img/download.jpg" alt="Cats studying" width="300" height="300">
+                 <p> You can use the attribute style to color, change fonts, size and others!</p>
+                 <p style="color:violet; font-family:monospace; font-size:x-large;"> <em>This is an example!</em></p>
+                 <hr>
+                 <p>The tag &lt;hr&gt; creates a line. </p>
+                 <p>You can also add special symbols with HTML!<br>
+                    &reg; &copy; &trade; &euro; &dollar; &yen; &Delta; &uparrow; <br>
+                    To find the symbols use: <a href="https://www.w3schools.com/charsets/ref_utf_symbols_intro.asp"> this link!</a></p>
+                 <p> To add emojis you can coppy them! But that only shows in certain browsers, another way to do it is   to include their hex code. <br> A good web page to find emojis is <a href="https://emojipedia.org">https://emojipedia.org</a>. There you can find almost any emoji and their code! The emoji code will look something like this: U+1F638 <br> To add to html you type &#x and everything after the plus sign and a ; at the end.<br> It should look like this! &#x1F638; </p>
+                 <p> When adding img for comercial websites, licensing is crucial. Some good web sites are:
+                  <ul>
+                     <li><a href="https://unsplash.com">https://unsplash.com</a></li>
+                     <li><a href="https://www.pexels.com">https://www.pexels.com</a></li>
+                  </ul>
+                 </p>
+                 <hr>
+             </section>
+             <div>
+               <h2>Creating a form with HTML</h2>
+             </div>
+             <section>
+               <form>
+                  <!--Form tag works like a container, including diferent types of elements like: text fields, checkboxes, radio buttons and others.-->
+                  <fieldset>
+                     <!-- Defines an area for the form to occupy-->
+                     <legend> About user:</legend> 
+                     <div>
+                        <label for="fname">First name:</label> <br>
+                        <!-- The for atribute in the label tag has to be the same as the id on the input tag to bind them together.-->
+                        <input type="text" id="fname" name="fname"> <br> 
+                        <!-- The input text is a single line input field for text. The name atribute is essencial in the process of identifiying the key value pairs, with out it the value will never reach the server.-->
+                        <label for="lname">Last name:</label> <br>
+                        <input type="text" id="lname" name="lname"> <br>
+
+                        <label for="email">Email:</label> <br>
+                        <input type="email" name="email" id="email"> <br>
+
+                        <label for="passcode">Password:</label><br>
+                        <input type="password" name="passcode" id="password"><br>
+                        
+                        <label for="birthday">Birthday:</label><br>
+                        <input type="date" id="birthday" name="birthday"> <br><br>
+
+                        <label for="profession"> Please select your profession:</label> <br>
+                        <select name="profession" id="profession"><br>
+                           <option value="unemployed">Unemployed</option>
+                           <option value="student">Student</option>
+                           <option value="selfemployed">Selfemployed</option>
+                           <option value="developer">Developer</option>
+                           <option value="other" selected >Other</option>
+                        </select><br><br>
+                        
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Submit">
+                      
+                     </div>
+                  </fieldset>
+               </form>
+             </section>
         </main>
 
         <footer>
-            <!-- O rodape da pagina.-->
+            
         </footer>
-        <!-- Tudo que esta dentro do body sera exposto na pagina.
-         As tags header, main e footer sao tags semanticas, com o intuito de separar cada area da pagina. -->
-         
+        
      </body>
     
  </html>
