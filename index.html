@@ -51,6 +51,49 @@
                      <li><a href="https://www.pexels.com">https://www.pexels.com</a></li>
                   </ul>
                  </p>
+                 <hr>
+             </section>
+             <div>
+               <h2>Creating a form with HTML</h2>
+             </div>
+             <section>
+               <form>
+                  <!--Form tag works like a container, including diferent types of elements like: text fields, checkboxes, radio buttons and others.-->
+                  <fieldset>
+                     <!-- Defines an area for the form to occupy-->
+                     <legend> About user:</legend> 
+                     <div>
+                        <label for="fname">First name:</label> <br>
+                        <!-- The for atribute in the label tag has to be the same as the id on the input tag to bind them together.-->
+                        <input type="text" id="fname" name="fname"> <br> 
+                        <!-- The input text is a single line input field for text. The name atribute is essencial in the process of identifiying the key value pairs, with out it the value will never reach the server.-->
+                        <label for="lname">Last name:</label> <br>
+                        <input type="text" id="lname" name="lname"> <br>
+
+                        <label for="email">Email:</label> <br>
+                        <input type="email" name="email" id="email"> <br>
+
+                        <label for="passcode">Password:</label><br>
+                        <input type="password" name="passcode" id="password"><br>
+                        
+                        <label for="birthday">Birthday:</label><br>
+                        <input type="date" id="birthday" name="birthday"> <br><br>
+
+                        <label for="profession"> Please select your profession:</label> <br>
+                        <select name="profession" id="profession"><br>
+                           <option value="unemployed">Unemployed</option>
+                           <option value="student">Student</option>
+                           <option value="selfemployed">Selfemployed</option>
+                           <option value="developer">Developer</option>
+                           <option value="other" selected >Other</option>
+                        </select><br><br>
+                        
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Submit">
+                      
+                     </div>
+                  </fieldset>
+               </form>
              </section>
         </main>
 
